@@ -11,4 +11,16 @@ const createUser=async (req,res)=>{
     }
 }
 
-module.exports={createUser}
+//editUser
+const editUser=async (req,res)=>{
+    let {idUser}=req.params
+    let newUser=req.body
+    try {
+        let user=await User.findOneAndUpdate({_id:idUser},newUser,{new:true})
+        res.json(user)
+    } catch (error) {
+        res.status(404).send(error)
+    }
+}
+
+module.exports={createUser,editUser}
