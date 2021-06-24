@@ -10,5 +10,4 @@ router.post('/createUser',userFunction.createUser)
 
 //put
 router.put('/editUser/:idUser',userFunction.editUser)
-
 module.exports=router
