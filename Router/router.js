@@ -1,3 +1,14 @@
 const router=require('express').Router()
+const userFunction=require('../Controllers/user')
 
-module.export=router
+//get
+
+//post
+router.post('/createUser',userFunction.createUser)
+
+//delete
+
+//put
+router.put('/editUser/:idUser',userFunction.editUser)
+
+module.exports=router
