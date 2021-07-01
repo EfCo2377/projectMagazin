@@ -9,9 +9,9 @@ dotenv.config()
 
 const cors=require('cors')
 
-// const routers=require('./Router/router')
+const routers=require('./Router/router')
 
-// app.use(cors(),routers)
+app.use(cors(),routers)
 
 const mongoose=require('mongoose')
 
