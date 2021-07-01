@@ -1,6 +1,7 @@
 const mongoose=require('mongoose')
 
 const postSchema=mongoose.Schema({
+    magazine:{type:mongoose.Schema.Types.ObjectId,ref:'Magazine'},
     name:{
         type:String,
         required:true,
@@ -11,7 +12,7 @@ const postSchema=mongoose.Schema({
         required:true
     },
     img:[
-        {type:Image}
+        {type:String}
     ]
 })
 
