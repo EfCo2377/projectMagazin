@@ -9,10 +9,11 @@ dotenv.config()
 
 const cors=require('cors')
 
-// const routers=require('./Router/router')
+const routers=require('./router/router')
 
-// app.use(cors(),routers)
-
+app.use(cors(),routers)
+// app.use(app.router);
+// routes.initialize(app);
 const mongoose=require('mongoose')
 
 const connectParonst  = {
