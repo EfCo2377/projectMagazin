@@ -5,8 +5,14 @@ const userSchema=mongoose.Schema({
         required:true,
         type:String
     },
+    userName:{
+        require:true,
+        type:String,
+        unique: true
+    },
     password:{
         required:true,
+        unique: true,
         maxlength:16,
         minlength:6,
         type:String
