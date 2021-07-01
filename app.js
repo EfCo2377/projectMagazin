@@ -9,7 +9,7 @@ dotenv.config()
 
 const cors=require('cors')
 
-const routers=require('./router/router')
+const router=require('./Router/router')
 
 app.use(cors(),routers)
 // app.use(app.router);
@@ -25,5 +25,7 @@ const connectParonst  = {
 mongoose.connect(process.env.DB_CONNECT,connectParonst)
 .then(()=>console.log("connect"))
 .catch((error)=>console.log(`error ${error}`))
+
+app.use(cors(),router)
 
 app.listen(process.env.PORT,()=>console.log("listen"))
