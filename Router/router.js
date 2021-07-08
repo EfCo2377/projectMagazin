@@ -1,4 +1,8 @@
 const router=require('express').Router()
+const magazineFunc=require("../Controllers/magazine")
+router.get('/getMagazinesByUser/:userName',magazineFunc.getMagazinesByUser)
+router.post('/addMagazine/:userName',magazineFunc.addMagazine)
+
 const PostController=require('../controllers/post')
 
 router.get('/getAllPostOfMagazin/:idMagazine',PostController.getAllPostOfMagazin)
@@ -16,6 +20,7 @@ router.post('/createUser',userFunction.createUser)
 
 //delete
 router.delete('/deleteUser/:nameUser',userFunction.deleteUser)
+router.delete('/deleteMagazine/:userName/:idMagazine')
 
 //put
 router.put('/editUser/:nameUser',userFunction.editUser)

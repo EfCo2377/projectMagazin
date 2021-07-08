@@ -1,6 +1,6 @@
 const mongoose=require("mongoose")
-const Post=require('./post')
-const User=require('./user')
+// const Post=require('./post')
+// const User=require('./user')
 const magazineSchema=mongoose.Schema({
     name:{
         type:String,
