@@ -1,6 +1,6 @@
 const mongoose=require("mongoose")
 // const Post=require('./post')
-const User=require('./user')
+// const User=require('./user')
 const magazineSchema=mongoose.Schema({
     name:{
         type:String,
@@ -16,9 +16,9 @@ const magazineSchema=mongoose.Schema({
     user:{
       type:mongoose.Schema.Types.ObjectId, ref:'User'
     },
-    // postArr:[
-    //     {type:mongoose.Schema.Types.ObjectId,ref:'Post'}
-    // ]
+    postArr:[
+        {type:mongoose.Schema.Types.ObjectId,ref:'Post'}
+    ]
 
     
 })

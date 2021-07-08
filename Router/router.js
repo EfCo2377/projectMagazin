@@ -14,6 +14,7 @@ router.post('/createUser',userFunction.createUser)
 
 //delete
 router.delete('/deleteUser/:nameUser',userFunction.deleteUser)
+router.delete('/deleteMagazine/:userName/:idMagazine')
 
 //put
 router.put('/editUser/:nameUser',userFunction.editUser)

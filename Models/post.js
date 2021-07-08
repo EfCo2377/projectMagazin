@@ -1,4 +1,5 @@
 const mongoose=require('mongoose')
+// const Magazine = require('./magazine')
 
 const postSchema=mongoose.Schema({
     name:{
@@ -9,6 +10,9 @@ const postSchema=mongoose.Schema({
     text:{
         type:String,
         required:true
+    },
+    magazine:{
+type:mongoose.Schema.Types.ObjectId,ref:'Magazine'
     },
     img:[
         {type:Image}
