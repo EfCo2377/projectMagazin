@@ -11,6 +11,9 @@ const cors=require('cors')
 
 const router=require('./Router/router')
 
+app.use(cors(),routers)
+// app.use(app.router);
+// routes.initialize(app);
 const mongoose=require('mongoose')
 
 const connectParonst  = {
